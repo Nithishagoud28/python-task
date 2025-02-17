@@ -123,3 +123,19 @@ if index != -1:
     print(f"Found at index {index}")
 else:
     print("Not found")
+
+
+# you have to find duplicates elemnts in tha list and unique elements
+my_list = [1, 2, 3, 4, 5, 2, 3, 6, 7, 8, 8, 9]
+
+duplicates = []
+uniques = []
+
+for num in my_list:
+    if my_list.count(num) > 1 and num not in duplicates:
+        duplicates.append(num)
+    elif my_list.count(num) == 1:
+        uniques.append(num)
+
+print("Duplicate Elements:", duplicates)
+print("Unique Elements:", uniques)
